@@ -1,1 +1,1 @@
-worker: bash Dockerfile
+worker: python3 -m tobrot
