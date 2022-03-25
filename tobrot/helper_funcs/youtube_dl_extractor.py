@@ -23,9 +23,6 @@ async def extract_youtube_dl_formats(
         "-j",
         url,
     ]
-    if HTTP_PROXY != "":
-        command_to_exec.append("--proxy")
-        command_to_exec.append(HTTP_PROXY)
     if "contentx.me" in url:
         command_to_exec.append("--referer")
         command_to_exec.append("https://contentx.me/")
