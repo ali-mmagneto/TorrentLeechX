@@ -23,6 +23,27 @@ async def extract_youtube_dl_formats(
         "-j",
         url,
     ]
+    if HTTP_PROXY != "":
+        command_to_exec.append("--proxy")
+        command_to_exec.append(HTTP_PROXY)
+    if "contentx.me" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://contentx.me/")
+    if "mail.ru" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://my.mail.ru/")
+    if "molystream" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://dbx.molystream.org/")
+    if "moly.cloud" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://vidmoly.to/")
+    if "closeload" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://closeload.com/")
+    if "htjusn1.xyz" in url:
+        command_to_exec.append("--referer")
+        command_to_exec.append("https://htjusn1.xyz/")
     if "hotstar" in url:
         command_to_exec.append("--geo-bypass-country")
         command_to_exec.append("IN")
