@@ -133,9 +133,6 @@ async def youtube_dl_call_back(bot, update):
     # command_to_exec.append("--quiet")
     command_to_exec.append("--restrict-filenames")
     #
-    if HTTP_PROXY != "":
-        command_to_exec.append("--proxy")
-        command_to_exec.append(HTTP_PROXY)
     if "contentx.me" in youtube_dl_url:
         command_to_exec.append("--referer")
         command_to_exec.append("https://contentx.me/")
